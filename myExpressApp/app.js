@@ -37,6 +37,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+app.use (function(req,res,next){
+  console.log('time:',Date.now());
+  next();
+});
 app.get('/',function (req, res) {
   res.send('Hola Mundillo\n');
 });
