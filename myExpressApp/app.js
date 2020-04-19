@@ -37,6 +37,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+app.get('/',function (req, res) {
+  res.send('Hola Mundillo\n');
+});
+app.listen(8080,function(){
+  console.log ('Example app listening on port 8080');
+});
+
 
 
 module.exports = app;
